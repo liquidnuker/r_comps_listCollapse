@@ -1,0 +1,51 @@
+// 
+// ==================================================/
+body {
+  @extend %system_normal--400;
+}
+
+h1 {
+  display: none;
+}
+
+.item-id {
+  background-color: #ccc;
+}
+
+// collapse1-01
+// ==================================================/
+.collapse1-01 {
+  li {
+    @extend %display--none;
+  }
+
+  label:after {
+    padding-left: 24px;
+  }
+
+  label:after{
+  @extend %display--inline-block;
+  content:"v";
+  }
+
+  label {
+    @extend %display--block;
+    background-color: #666;
+    color: #fff;
+    cursor:pointer; 
+  }
+
+  input[type="checkbox"]{
+    @extend %pos--absolute;
+    visibility: hidden;
+  }
+
+  #collapse1-01--toggle:checked ~ li {  
+    @extend %display--block;
+  }
+
+  #collapse1-01--toggle:checked ~ label:after{
+      @extend %display--inline-block;
+      content: "^";
+    }
+}
