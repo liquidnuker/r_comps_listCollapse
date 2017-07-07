@@ -12,9 +12,9 @@ h1 {
   background-color: #ccc;
 }
 
-// collapse1-01
+// list_collapse1-01
 // ==================================================/
-.collapse1-01 {
+.list_collapse1-01 {
   li {
     @extend %display--none;
   }
@@ -40,11 +40,11 @@ h1 {
     visibility: hidden;
   }
 
-  #collapse1-01--toggle:checked ~ li {  
+  #list_collapse1-01--toggle:checked ~ li {  
     @extend %display--block;
   }
 
-  #collapse1-01--toggle:checked ~ label:after{
+  #list_collapse1-01--toggle:checked ~ label:after{
       @extend %display--inline-block;
       content: "^";
     }
