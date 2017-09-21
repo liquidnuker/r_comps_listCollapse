@@ -22,15 +22,25 @@
     <div class="col-sm-3">39</div>
     <div class="col-sm-9">
       <!-- listCollapse101 -->
-      <ul class="listCollapse101">
+      <div class="listCollapse101">
         <input type="checkbox" id="listCollapse101--toggle"/>
-        <label for="listCollapse101--toggle">items:</label>
-        
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-        <li>item 4</li>
-      </ul>
+        <label for="listCollapse101--toggle">
+          <span class="listCollapse101_iconShow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          </span>
+          <span class="listCollapse101_iconHide">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </span>
+          items:
+        </label>
+        <div class="listCollapse101_content">
+          content
+        </div>
+      </div>
       <!-- end listCollapse101 -->
     </div>
   </div>

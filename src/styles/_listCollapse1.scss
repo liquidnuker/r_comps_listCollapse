@@ -1,37 +1,78 @@
 // listCollapse101
 // ==================================================/
+@mixin listCollapse101_theme() {
+  .listCollapse101 {
+    label {
+      background-color: #1c1d22;
+      color: #fff;
+
+      > span {
+        svg {
+          background-color: #ededed;
+        }
+      }
+
+      &:hover {
+        svg {
+          background-color: #fff;
+          fill: #be0101;
+        }
+      }
+    }
+
+    #listCollapse101--toggle:checked ~ .listCollapse101_content {  
+      background-color: #2c2d32;
+      color: #d5d5d5;
+    }
+  }
+}
+@include listCollapse101_theme();
+
 .listCollapse101 {
+  label {
+    @extend %padd--4;
+    @extend %display--block;
+    cursor:pointer; 
+
+    > span {
+      @extend %display--inline-block;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        vertical-align: text-top;
+      }
+    }
+  }
+
   li {
     @extend %display--none;
-  }
-
-  label:after {
-    padding-left: 24px;
-  }
-
-  label:after{
-  @extend %display--inline-block;
-  content:"v";
-  }
-
-  label {
-    @extend %display--block;
-    background-color: #666;
-    color: #fff;
-    cursor:pointer; 
-  }
+  }  
 
   input[type="checkbox"]{
     @extend %pos--absolute;
     visibility: hidden;
   }
 
-  #listCollapse101--toggle:checked ~ li {  
-    @extend %display--block;
+  .listCollapse101_iconHide {
+    @extend %display--none;
   }
 
-  #listCollapse101--toggle:checked ~ label:after{
-      @extend %display--inline-block;
-      content: "^";
-    }
+  .listCollapse101_content {
+    @extend %display--none;
+  }
+
+  #listCollapse101--toggle:checked ~ .listCollapse101_content {  
+    @extend %display--block;
+    @extend %padd--4;
+  }
+
+  // for toggle icons
+  #listCollapse101--toggle:checked ~ label > .listCollapse101_iconHide {
+    @extend %display--inline-block;
+  }
+
+  #listCollapse101--toggle:checked ~ label > .listCollapse101_iconShow {
+    @extend %display--none;
+  }
 }

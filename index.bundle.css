@@ -9,13 +9,13 @@
 .listCollapse101 input[type="checkbox"] {
   position: absolute; }
 
-.listCollapse101 label, .listCollapse101 #listCollapse101--toggle:checked ~ li {
+.listCollapse101 label, .listCollapse101 #listCollapse101--toggle:checked ~ .listCollapse101_content {
   display: block; }
 
-.btn, .listCollapse101 label:after, .listCollapse101 #listCollapse101--toggle:checked ~ label:after {
+.btn, .listCollapse101 label > span, .listCollapse101 #listCollapse101--toggle:checked ~ label > .listCollapse101_iconHide {
   display: inline-block; }
 
-.listCollapse101 li {
+.listCollapse101 li, .listCollapse101 .listCollapse101_iconHide, .listCollapse101 .listCollapse101_content, .listCollapse101 #listCollapse101--toggle:checked ~ label > .listCollapse101_iconShow {
   display: none; }
 
 input, textarea, select, html, body, div, span, applet, object, iframe,
@@ -37,7 +37,7 @@ input [type="button"],
   margin: 0;
   padding: 0; }
 
-.btn1-01 {
+.btn1-01, .listCollapse101 label, .listCollapse101 #listCollapse101--toggle:checked ~ .listCollapse101_content {
   padding: 4px; }
 
 *,
@@ -803,22 +803,28 @@ input [type="button"],
   .col-lg-1 {
     width: 8.33333333%; } }
 
-.listCollapse101 label:after {
-  padding-left: 24px; }
+.listCollapse101 label {
+  background-color: #1c1d22;
+  color: #fff; }
+  .listCollapse101 label > span svg {
+    background-color: #ededed; }
+  .listCollapse101 label:hover svg {
+    background-color: #fff;
+    fill: #be0101; }
 
-.listCollapse101 label:after {
-  content: "v"; }
+.listCollapse101 #listCollapse101--toggle:checked ~ .listCollapse101_content {
+  background-color: #2c2d32;
+  color: #d5d5d5; }
 
 .listCollapse101 label {
-  background-color: #666;
-  color: #fff;
   cursor: pointer; }
+  .listCollapse101 label > span svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: text-top; }
 
 .listCollapse101 input[type="checkbox"] {
   visibility: hidden; }
-
-.listCollapse101 #listCollapse101--toggle:checked ~ label:after {
-  content: "^"; }
 
 [class|="col"] {
   position: relative;
