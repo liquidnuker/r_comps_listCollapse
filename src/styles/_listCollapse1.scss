@@ -1,20 +1,6 @@
-// 
+// listCollapse101
 // ==================================================/
-body {
-  @extend %system_normal--400;
-}
-
-h1 {
-  display: none;
-}
-
-.item-id {
-  background-color: #ccc;
-}
-
-// list_collapse1-01
-// ==================================================/
-.list_collapse1-01 {
+.listCollapse101 {
   li {
     @extend %display--none;
   }
@@ -40,11 +26,11 @@ h1 {
     visibility: hidden;
   }
 
-  #list_collapse1-01--toggle:checked ~ li {  
+  #listCollapse101--toggle:checked ~ li {  
     @extend %display--block;
   }
 
-  #list_collapse1-01--toggle:checked ~ label:after{
+  #listCollapse101--toggle:checked ~ label:after{
       @extend %display--inline-block;
       content: "^";
     }
